@@ -129,7 +129,10 @@
 				return `I found some information for ${rawText}`;
 			}
 			*/
-
+			
+			if(!text || text.length === 0 ){
+				response = "No voice commmand detected";
+			}
 			
 			switch(true) {
 				case text.includes("hello"):
