@@ -149,6 +149,8 @@
 				case text.includes("exit"):
 					response = "Bye!!";
 					toggleBtn();
+				case text.length()===0:
+					response = "No voice commmand detected"; break;
 			}
 			if (!response) {
 				window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
