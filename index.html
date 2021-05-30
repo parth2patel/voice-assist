@@ -154,10 +154,12 @@
 					toggleBtn();
 				case text.length()===0:
 					response = "No voice commmand detected"; break;
+				default:
+					window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
+					return `I found some information for ${rawText}`;
 			}
 			if (!response) {
-				window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
-				return `I found some information for ${rawText}`;
+				response = "No voice commmand detected";
 			}
 			return response; 
 			
