@@ -133,12 +133,15 @@
 			if(!text || text.length === 0 ){
 				response = "No voice commmand detected";
 			}
+
 			
 			switch(true) {
+				//case text.length()===0:
+				//	response = "No voice commmand detected"; break;
 				case text.includes("hello"):
 					response = "hi, how are you doing?"; break;
 				case text.includes("name"):
-					response = "My name's Alexa.";  break;
+					response = "My name's Siri.";  break;
 				case text.includes("howareyou"):
 					response = "I'm good."; break;
 				case text.includes("time"):
@@ -148,19 +151,19 @@
 					response = "playing"; break;
 				case text.includes("stop"):
 					response = "Bye!!";
-					toggleBtn();
+					toggleBtn(); break;
 				case text.includes("exit"):
 					response = "Bye!!";
-					toggleBtn();
-				case text.length()===0:
-					response = "No voice commmand detected"; break;
+					toggleBtn(); break;
 				default:
-					window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
-					return `I found some information for ${rawText}`;
+				window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
+				return `I found some information for ${rawText}`;
 			}
+
 			if (!response) {
 				response = "No voice commmand detected";
 			}
+
 			return response; 
 			
 		}
