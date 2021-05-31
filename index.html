@@ -51,7 +51,7 @@
 		startBtn.innerHTML = "Start listening";
 		const result = document.createElement("div");
 		const processing = document.createElement("p");
-		document.write("<body><h1>Voice Assistant</h1><p>Give it a try with 'hello', 'how are you', 'what's your name', 'what time is it', 'stop', ... </p></body>");
+		document.write("<body><h1>Voice Assistant</h1><p>Try saying: 'hello', 'what's your name', 'how are you', 'what time is it', 'stop', ... </p></body>");
 		document.body.append(startBtn);
 		document.body.append(result);
 		document.body.append(processing);
@@ -89,10 +89,10 @@
 			toggleBtn = () => {
 				if (listening) {
 					recognition.stop();
-					startBtn.textContent = "Start listening";
+					startBtn.textContent = "Start";
 				} else {
 					recognition.start();
-					startBtn.textContent = "Stop listening";
+					startBtn.textContent = "Stop";
 				}
 				listening = !listening;
 			};
