@@ -155,12 +155,12 @@
 				case text.includes("play"):
 					window.open(`https://www.youtube.com/results?search_query=${rawText.replace("play", "")}`, "_blank");
 					response = "playing"; break;
-				case text.includes("stop"):
+				case text.includes("stop") || text.includes("exit"):
 					response = "Bye!!";
 					toggleBtn(); break;
-				case text.includes("exit"):
-					response = "Bye!!";
-					toggleBtn(); break;
+				//case text.includes("exit"):
+				//	response = "Bye!!";
+				//	toggleBtn(); break;
 				default:
 				window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
 				return `I found some information for ${rawText}`;
