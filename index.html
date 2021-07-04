@@ -141,9 +141,15 @@
 				case text.includes("hello"):
 					response = "hi, how are you doing?"; break;
 				case text.includes("name"):
-					response = "My name's Siri.";  break;
+					response = "My name's Alexa.";  break;
 				case text.includes("howareyou"):
 					response = "I'm good."; break;
+				case text.includes("weather"):
+					response = "The weather is good."; break;
+				case text.includes("fine"):
+					response = "good."; break;
+				case text.includes("iamgood"):
+					response = "great."; break;
 				case text.includes("time"):
 					response = new Date().toLocaleTimeString(); break;
 				case text.includes("play"):
