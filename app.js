@@ -8,13 +8,13 @@ document.body.append(result);
 document.body.append(processing);
 
 // speech to text
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const SpeechRecog = window.SpeechRecognition || window.webkitSpeechRecognition;
 let toggleBtn = null;
-if (typeof SpeechRecognition === "undefined") {
+if (typeof SpeechRecog === "undefined") {
     startBtn.remove();
     result.innerHTML = "<b>Browser does not support Speech API. Please download latest chrome.<b>";
 } else {
-    const recognition = new SpeechRecognition();
+    const recognition = new SpeechRecog();
     recognition.continuous = true;
     recognition.interimResults = true;
     recognition.onresult = event => {
