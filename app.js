@@ -57,7 +57,9 @@ function process(rawText) {
     //let text = rawText
     text = text.toLowerCase();
     let response = null;
-    
+    if(!text || text.length === 0 ){
+        response = "No voice commmand detected";
+    }
     const jokes = [
         'What kind of music do bunnies like best? Answer: Hip Hop!',
         'Why are cricket stadiums so cool? Answer: Because every seat has a fan in it!',
