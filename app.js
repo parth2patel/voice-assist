@@ -8,13 +8,13 @@ document.body.append(result);
 document.body.append(processing);
 
 // speech to text
-const SpeechRecog = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
+window.SpeechRecog = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
 let toggleBtn = null;
-if (typeof SpeechRecog === "undefined") {
+if (typeof window.SpeechRecog === "undefined") {
     startBtn.remove();
     result.innerHTML = "<b>Browser does not support Speech API. Please download latest chrome.<b>";
 } else {
-    const recognition = new SpeechRecog();
+    const recognition = new window.SpeechRecog();
     recognition.continuous = true;
     recognition.interimResults = true;
     recognition.onresult = event => {
@@ -23,12 +23,8 @@ if (typeof SpeechRecog === "undefined") {
         const text = res[0].transcript;
         if (res.isFinal) {
             processing.innerHTML = "processing ....";
-            var response = null;
-            if(!text || text.length === 0 ){
-                //response = "No voice commmand detected";
-            }
-            else response = process(text);
-            //const response = process(text);
+            
+            const response = process(text);
             const p = document.createElement("p");
             p.innerHTML = `You said: ${text} </br>Alexa said: ${response}`;
             processing.innerHTML = "";
