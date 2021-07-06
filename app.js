@@ -1,6 +1,6 @@
 // UI comp
 const startBtn = document.createElement("button");
-startBtn.innerHTML = "Start listening";
+startBtn.innerHTML = "Start Listening";
 const result = document.createElement("div");
 const processing = document.createElement("p");
 document.body.append(startBtn);
@@ -40,10 +40,10 @@ if (typeof SpeechRecognition === "undefined") {
     toggleBtn = () => {
         if (listening) {
             recognition.stop();
-            startBtn.textContent = "Start listening";
+            startBtn.textContent = "Start Listening";
         } else {
             recognition.start();
-            startBtn.textContent = "Stop listening";
+            startBtn.textContent = "Stop Listening";
         }
         listening = !listening;
     };
@@ -95,8 +95,8 @@ function process(rawText) {
         const txt = rawText.replace("Play", "");
         response = "playing" + txt;
     }
-    else if(text.includes("stop") || text.includes("exit")){
-        response = "Bye!!";
+    else if(text.includes("stop") || text.includes("exit") || text.includes("bye")){
+        response = "Bye!";
         toggleBtn();
     }
 
