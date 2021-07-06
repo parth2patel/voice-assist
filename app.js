@@ -8,7 +8,7 @@ document.body.append(result);
 document.body.append(processing);
 
 // speech to text
-window.SpeechRecog = window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
+window.SpeechRecog = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
 let toggleBtn = null;
 if (typeof window.SpeechRecog === "undefined") {
     startBtn.remove();
