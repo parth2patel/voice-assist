@@ -23,8 +23,12 @@ if (typeof SpeechRecog === "undefined") {
         const text = res[0].transcript;
         if (res.isFinal) {
             processing.innerHTML = "processing ....";
-            
-            const response = process(text);
+            var response = null;
+            if(!text || text.length === 0 ){
+                //response = "No voice commmand detected";
+            }
+            else response = process(text);
+            //const response = process(text);
             const p = document.createElement("p");
             p.innerHTML = `You said: ${text} </br>Alexa said: ${response}`;
             processing.innerHTML = "";
