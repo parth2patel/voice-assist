@@ -98,7 +98,7 @@ function process(rawText) {
     }
     else if(text.includes("time")){
 	let date = new Date();
-        response = `It's ${date.getHours()} ${date.getMinutes()} ${date.getHours() >= 12 ? "PM" : "AM" }`;
+        response = "It's ${date.getHours()} ${date.getMinutes()} ${date.getHours() >= 12 ? "PM" : "AM" }";
     }
     else if(text.includes("joke")){
         response = jokes[Math.floor(Math.random()*jokes.length)];
