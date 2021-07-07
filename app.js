@@ -95,6 +95,12 @@ function process(rawText) {
     else if(text.includes("weather")){
         response = "The weather is humid";
     }
+    else if(text.includes("thanks")){
+    	response = "Your Welcome!";
+    }
+    else if(text.includes("nice")){
+    	response = "Thanks!";
+    }
     else if(text.includes("time")){
 	let hrs = new Date().getHours();
         let am = " PM";
