@@ -54,7 +54,7 @@ if (typeof window.SpeechRecog === "undefined") {
 // processor
 function process(rawText) {
     const q = document.createElement("p");
-    q.innerHTML = 'rawText is ${rawText}';
+    q.innerHTML = `You said: ${rawText}`;
     result.appendChild(q);
     let text = rawText.replace(/\s/g, "");
     //let text = rawText
