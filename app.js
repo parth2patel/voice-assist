@@ -16,7 +16,16 @@ if (typeof window.SpeechRecog === "undefined") {
 } else {
     const recognition = new window.SpeechRecog();
     recognition.continuous = true;
-    recognition.interimResults = false;
+    
+    //To detect User Device
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		var element = document.getElementById('text');
+		if (isMobile) {
+  			recognition.interimResults = false;
+		} else {
+			recognition.interimResults = true;
+		}
+    //recognition.interimResults = false;
     recognition.onresult = event => {
         const last = event.results.length - 1;
         const res = event.results[last];
