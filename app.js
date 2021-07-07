@@ -16,7 +16,7 @@ if (typeof window.SpeechRecog === "undefined") {
 } else {
     const recognition = new window.SpeechRecog();
     recognition.continuous = true;
-    recognition.interimResults = true;
+    recognition.interimResults = false;
     recognition.onresult = event => {
         const last = event.results.length - 1;
         const res = event.results[last];
@@ -54,8 +54,6 @@ if (typeof window.SpeechRecog === "undefined") {
 // processor
 function process(rawText) {
     const q = document.createElement("p");
-    q.innerHTML = `You said: ${rawText}`;
-    result.appendChild(q);
     let text = rawText.replace(/\s/g, "");
     //let text = rawText
     text = text.toLowerCase();
