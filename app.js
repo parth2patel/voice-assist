@@ -97,15 +97,17 @@ function process(rawText) {
         response = "The weather is humid";
     }
     else if(text.includes("time")){
-        response = new Date().toLocaleTimeString();
+	let date = new Date();
+        response = `It's ${date.getHours()} ${date.getMinutes()} ${date.getHours() >= 12 ? "PM" : "AM" }`;
     }
     else if(text.includes("joke")){
         response = jokes[Math.floor(Math.random()*jokes.length)];
     }
     else if(text.includes("play")){
-        window.open(`https://www.youtube.com/results?search_query=${rawText.replace("Play", "")}`, "_blank");
-        const txt = rawText.replace("Play", "");
-        response = "playing" + txt;
+	let query = rawText.replace("Play","");
+	query = query.replace("play","");
+        window.open(`https://www.youtube.com/results?search_query=${query}`, "_blank");
+        response = "playing" + query;
     }
     else if(text.includes("stop") || text.includes("exit") || text.includes("bye")){
         response = "Bye!";
