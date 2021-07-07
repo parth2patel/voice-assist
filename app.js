@@ -95,7 +95,7 @@ function process(rawText) {
     else if(text.includes("weather")){
         response = "The weather is humid";
     }
-    else if(text.includes("thanks")){
+    else if(text.includes("thanks") || text.includes("thankyou")){
     	response = "Your Welcome!";
     }
     else if(text.includes("nice")){
