@@ -20,7 +20,7 @@ if (typeof window.SpeechRecog === "undefined") {
     recognition.onresult = event => {
         const last = event.results.length - 1;
         const res = event.results[last];
-        const text = res[0].transcript;
+        const text = res[0].transcript.trim();
         if (res.isFinal) {
             processing.innerHTML = "processing ....";
             
