@@ -19,12 +19,11 @@ if (typeof window.SpeechRecog === "undefined") {
     
     //To detect User Device
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-		var element = document.getElementById('text');
-		if (isMobile) {
-  			recognition.interimResults = false;
-		} else {
-			recognition.interimResults = true;
-		}
+	if (isMobile) {
+  		recognition.interimResults = false;
+	} else {
+		recognition.interimResults = true;
+	}
     //recognition.interimResults = false;
     recognition.onresult = event => {
         const last = event.results.length - 1;
