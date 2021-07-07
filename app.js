@@ -97,10 +97,14 @@ function process(rawText) {
         response = "The weather is humid";
     }
     else if(text.includes("time")){
-	let date = new Date();
-	//let hrs = date.getHours();
-	//let mins = date.getMinutes();
-        response = "It's ${date.getHours()} + ":" + ${date.getMinutes()} ${date.getHours() >= 12 ? "PM" : "AM" }";
+	let hrs = new Date().getHours();
+        let am = " PM";
+        if(hrs>12){
+            hrs = hrs-12;
+        }
+        else if(hrs==12) am = " PM";
+        else am = " AM";
+        response = "It's " + hrs + ":" + new Date().getMinutes() + am;
     }
     else if(text.includes("joke")){
         response = jokes[Math.floor(Math.random()*jokes.length)];
