@@ -34,7 +34,7 @@ if (typeof window.SpeechRecog === "undefined") {
             
             const response = process(text);
             const p = document.createElement("p");
-            p.innerHTML = `You said: ${text} </br>Siri said: ${response}`;
+            p.innerHTML = `You said: ${text} </br>Alexa said: ${response}`;
             processing.innerHTML = "";
             result.appendChild(p);
 
