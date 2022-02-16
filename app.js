@@ -120,6 +120,10 @@ function process(rawText) {
         window.open(`https://www.youtube.com/results?search_query=${query}`, "_blank");
         response = "playing" + query;
     }
+    else if(text.includes("parth")){
+	window.open(`https://www.linkedin.com/in/parthtopatel`, "_blank");    
+        response = "He's a Passionate Developer, You should reach out to him on LinkedIn";
+    }
     else if(text.includes("stop") || text.includes("exit") || text.includes("bye")){
         response = "Bye!";
         toggleBtn();
