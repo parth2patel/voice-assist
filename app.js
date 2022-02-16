@@ -81,7 +81,7 @@ function process(rawText) {
         response = "hi, how are you doing?";
     }
     else if(text.includes("name")){
-        response = "My name's Siri.";
+        response = "My name's Alexa.";
     }
     else if(text.includes("howareyou")){
         response = "I'm good.";
