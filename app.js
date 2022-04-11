@@ -34,7 +34,7 @@ if (typeof window.SpeechRecog === "undefined") {
             
             const response = process(text);
             const p = document.createElement("p");
-            p.innerHTML = `You said: ${text} </br>Alexa said: ${response}`;
+            p.innerHTML = `You said: ${text} </br>Siri said: ${response}`;
             processing.innerHTML = "";
             result.appendChild(p);
 
@@ -81,7 +81,7 @@ function process(rawText) {
         response = "hi, how are you doing?";
     }
     else if(text.includes("name")){
-        response = "My name's Alexa.";
+        response = "My name's Siri.";
     }
     else if(text.includes("howareyou")){
         response = "I'm good.";
