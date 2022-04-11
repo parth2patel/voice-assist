@@ -1,4 +1,4 @@
-# Alexa Voice Assistant
+# Siri Voice Assistant
 ![alt text](https://github.com/parth2patel/voice-assist/blob/main/personal-voice-assistant.png?raw=true)
 
 A JavaScript based Voice Assistant
@@ -22,4 +22,4 @@ It answers to some of the common queries which includes:
 10. Empty Command Alert (No voice command detected)
 
 ## Disclamer
-This is just a personal project of mine and is no way associated with Alexa by Amazon ;)
+This is just a personal project of mine and is no way associated with Siri by Apple ;)
