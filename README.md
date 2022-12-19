@@ -1,4 +1,4 @@
-# Siri Voice Assistant
+# Personal Voice Assistant
 ![alt text](https://github.com/parth2patel/voice-assist/blob/main/personal-voice-assistant.png?raw=true)
 
 A JavaScript based Voice Assistant
@@ -6,7 +6,7 @@ A JavaScript based Voice Assistant
 ## How to run the application ?
 Just click on the following link to view the project and start giving commands using the "Start Listening" button:
 
-https://voice.parthtopatel.ml/
+https://voice.parthpatel.ml/
 
 ## Features
 It answers to some of the common queries which includes:
@@ -21,5 +21,4 @@ It answers to some of the common queries which includes:
 9. Google Search (What day is it on 15th May?)
 10. Empty Command Alert (No voice command detected)
 
-## Disclamer
-This is just a personal project of mine and is no way associated with Siri by Apple ;)
+Have fun ;)
