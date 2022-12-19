@@ -1,4 +1,4 @@
-# Personal Voice Assistant
+# Robin - Personal Voice Assistant
 ![alt text](https://github.com/parth2patel/voice-assist/blob/main/personal-voice-assistant.png?raw=true)
 
 A JavaScript based Voice Assistant
